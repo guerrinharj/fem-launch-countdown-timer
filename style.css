@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+
+@keyframes opac {
+    0%   {transform: rotateX(0deg);}
+    50%    {transform: rotateX(360deg); }
+    100%   {transform: rotateX(0deg); }
+  }
+
+
+  @keyframes moveStars {
+      0% {background-position-x: 1vw;}
+      100% {background-position-x: 1000vw;}
+  }
+
+
+body {
+    margin: 0!important;
+    font-family: 'Red Hat Text', sans-serif;
+    overflow:hidden;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url('./images/bg-stars.svg');
+    animation: moveStars 1000s infinite;
+    background-color: hsl(234, 17%, 12%)
+}
+
+
+.box-container {
+    margin: auto;
+    width: 60vw
+}
+
+.launching {
+    text-align: center;
+}
+
+.launching h1 {
+    font-size: 1.4rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.date {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 0;
+}
+
+.time-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 10vw
+}
+
+.time-area .date-number-box {
+    background-image: linear-gradient(hsl(235, 16%, 14%), hsl(236, 21%, 26%));
+    padding: 1rem;
+    width: 10vw;
+    height: 18vh;
+    border-radius: 20px;
+    text-align: center;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.time-area .date-number-box div {
+    position: absolute;
+    background-color:  transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.animation-on {
+    animation: opac 2s linear;
+    opacity: 0.2;
+}
+
+.animation-on-seconds {
+    animation: opac 2s infinite;
+}
+
+
+
+.time-area .date-number-box span {
+    font-size: 5rem;
+    color: hsl(345, 95%, 68%);
+}
+
+
+
+.time-area .date-name span {
+    text-align: center;
+    text-transform: uppercase;
+    color: hsl(237, 18%, 59%);
+    letter-spacing: 0.5rem;
+    font-size: 0.9rem;
+
+}
+
+
+.main-end {
+    background-image: url('./images/pattern-hills.svg');
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 30vh;
+    position: relative;
+    background-size: cover;
+}
+
+.footer-area {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(50%);
+}
+
+.footer {
+    width: 15%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer a:hover  path {
+    transition: 0.3s ease;
+    fill: hsl(345, 95%, 68%);
+}
+
+
+@media (max-width: 1350px) {
+
+    .box-container {
+        width: 80vw;
+    }
+
+    .time-area .date-number-box {
+        padding: 6rem;
+        height: 0vh;
+    }
+
+
+    .time-area .date-number-box span {
+        font-size: 3.5rem;
+
+    }
+
+    .footer {
+        width: 40%
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .box-container {
+        width: 80vw;
+    }
+
+
+    .time-area .date-number-box {
+        padding: 4rem;
+        height: 0vh;
+    }
+
+
+    .time-area .date-number-box span {
+        font-size: 2.8rem;
+    }
+
+ 
+
+}
+
+
+
+@media (max-width: 600px) {
+
+.box-container {
+    width: 95vw
+}
+
+.launching {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.time-area {
+    width: 20vw;
+}
+
+
+.time-area .date-number-box {
+    height: 8vh;
+    width: 15vw;
+    padding: 0.5rem;
+}
+
+.time-area .date-number-box span {
+    font-size: 2.2rem
+}
+
+.time-area .date-name span {
+    font-size: 0.8rem;
+    letter-spacing: 4.4px;
+}
+
+.footer {
+    width: 50%
+}
+
+
+}
